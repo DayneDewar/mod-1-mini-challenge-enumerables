@@ -7,7 +7,9 @@ spicy_foods = [
 ]
 
 def print_spicy_foods(spicy_foods)
-
+  spicy_foods.each do |food|
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{food[:heat_level]}) }"
+  end
 end
 
 def get_names(spicy_foods)
