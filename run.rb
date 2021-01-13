@@ -31,16 +31,27 @@ def spiciest_foods(spicy_foods)
 end
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine)
-
+  hash = {}
+  spicy_foods.each do |food|
+    if food[:cuisine] == cuisine
+      hash = food
+    end
+  end
+  hash
 end
 
 # BONUS Deliverables
 def print_spiciest_foods(spicy_foods)
-
+  spicy = spiciest_foods(spicy_foods)
+  print_spicy_foods(spicy)
 end
 
 def average_heat_level(spicy_foods)
-
+  heat = 0
+  spicy_foods.each do |food|
+    heat += food[:heat_level]
+  end
+  heat/spicy_foods.length
 end
 
 # Use this to test your methods
